@@ -1,0 +1,597 @@
+<!doctype html>
+<html>
+    <head><title>hotel home page</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        body{
+            background-color: black;
+        }
+        .container{
+             display:flex;
+            justify-content:center;
+}       
+        .hero{
+            position:relative;
+            height:500px;
+            width:1000px;
+            overflow:hidden;
+            border-bottom-left-radius: 20%;
+            border-bottom-right-radius: 20%;
+        }
+        .nav{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            background-color: black;
+        }
+        a{
+            font-size:large;
+            color:white;
+            padding:10px;
+            align-self: center;
+        }
+        .button{
+          margin-left:100px;
+          border-radius:50px;
+          padding:5px;
+          background-color:steelblue;
+          margin:30px;
+        }
+        .logo{
+            margin-right:60px;
+        }
+        .hero p{
+            position: absolute;
+            top:300px;
+            left:360px;
+            text-transform:capitalize;
+            font-size:40px;
+            color:black;
+        }
+        .containers-1{
+            display:flex;
+            justify-content: center;
+        }
+        .about{
+            position: relative;
+            margin-top:80px;
+            height:400px;
+            width:300px;
+            border-radius:0%;
+            margin-right:40px;
+            overflow:hidden;
+            color:white;
+        }
+        .about-1{
+            position:relative;
+            margin-top:80px;
+            height:400px;
+            width:300px;
+            border-radius:20%;
+            overflow:hidden;
+            margin-left:10px;
+        }
+        .img-1{
+            position:absolute;
+        }
+        .about-2{
+            margin-left:40px;
+        }
+        .about h1{
+            margin-top:10px;
+            position: absolute;
+        }
+        .grid-box{
+            display:grid;
+            grid-template-columns:repeat(3, 1fr);
+            gap: 10px;
+            height:30px;
+            font-size:x-large;
+            margin-top:15px;
+            color:steelblue;
+        }
+        .grid-box h6{
+            font-size:12px;
+            color:white;
+        }
+        .button1{
+            margin-top: 30px;
+            border-radius:50px;
+            background-color: steelblue;
+            padding:5px;
+            border-color: transparent;
+        }
+        .grid{
+            display:grid;
+            grid-template-rows: repeat(4, 92px);
+            grid-auto-rows: minmax(400px, auto);
+            grid-auto-columns: minmax(50px, auto);
+            gap:10px;
+        }
+        .logo1{
+            display:float;
+            float: left;
+        }
+        .section-1 h5{
+            position:absolute;
+            top:45px;
+            left:90px;
+        }
+        .section-1 h2{
+            position:absolute;
+            top:20px;
+            left:90px;
+        }
+        .section-2 h5{
+           position:absolute;
+            top:150px;
+            left:90px;
+        }
+        .section-2 h2{
+            position:absolute;
+            top:120px;
+            left:90px;
+         }
+         .section-3 h5{
+           position:absolute;
+            top:255px;
+            left:100px;
+         }
+         .section-3 h2{
+            position:absolute;
+            top:230px;
+            left:100px;
+         }
+        .section-4 h5{
+           position:absolute;
+            top:350px;
+            left:100px;
+         }
+         .section-4 h2{
+            position:absolute;
+            top:320px;
+            left:100px;
+         }
+         .flex-container{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+         }
+         .flex{
+            margin-top:80px;
+            height:700px;
+            width:1050px;
+         }
+         .grid-room{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            width:100%;
+            max-width:525px;
+            height:348px;
+            color:white;
+            background-color: rgb(88, 83, 83);
+         }
+         .grid-room1{
+            display:grid;
+            grid-template-columns:repeat(2, 1fr);
+            grid-template-rows:repeat(2, 1fr);
+            width:100%;
+            max-width:520px;
+            height:347px;
+            justify-self:end;
+            color:white;
+            background-color:rgb(88, 83, 83);
+        }
+          .bed-size1, .bed-size2{
+            width:99%;
+            height:99%;
+         }
+         .bed-size3, .bed-size4{
+            width: 99%;
+            height: 99%;
+        }
+        .empty{
+            background-color: transparent;
+        }
+        .img1{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+        .bed-button{
+            border-radius: 20px;
+            background-color: steelblue;
+            border:transparent;
+            padding:5px;
+            color:white;
+
+        }
+        .heading{
+            display:flex;
+            justify-content:center;
+            margin-top:100px;
+            color:white;
+        }  
+        .h-f{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+        }
+        .facility{
+            position:relative;
+            height:500px;
+            width:1050px;
+            margin-top:90px;
+        }
+        .gym{
+            height:100%;
+            width:100%;
+            object-fit: cover;
+        }
+        .circle{
+            display:flex;
+            justify-content: center; 
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            top: -50px;
+            left: 15%; 
+            background-color:white;
+        }
+        .circle-1{
+            top: -50px; 
+            left: 27%;
+        }
+        .circle-2{
+            top:-50px;
+            left:39%;
+        }
+        .circle-3{
+            top:-50px;
+            left:51%;
+        }
+        .circle-4{
+            top:-50px;
+            left:63%;
+        }
+        .circle-5{
+            top:-50px;
+            left:75%;
+        }
+        .circle-img{
+            margin-top:25px; 
+        }
+        .card-styling{
+            display:flex;
+            flex-direction:row;
+            flex-wrap:wrap;
+            justify-content: center;
+            align-items:center;
+            text-align:center;
+            gap:20px;
+        }
+        .card{
+            margin-top:60px;
+            height:320px;
+            width:300px;
+            background-color: rgb(88, 83, 83);
+            padding:5px;
+            color:white;
+            border-radius:30px;
+        }
+        .card h1{
+            font-size:2rem;
+            margin-bottom:20px;
+        }
+        .book-btn{
+            padding:10px;
+            border-radius: 20px;
+            background-color:steelblue;
+            border-color:transparent;
+            margin-top:10px;
+            color:white;
+        }
+        .card-img{
+            margin-top:10px;
+        }
+        .service-heading{
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top:80px;
+            color:white;
+        }
+        .services-section{
+            margin-top: 30px;
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap:10px;
+        }
+        .service{
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding:10px;
+            background-color:rgb(88, 83, 83);
+            color:white;
+            height:330px;
+            width:300px
+        }
+        .services-2{
+            margin-top:30px;
+            gap:10px;
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .service p {
+            margin-top:20px;
+        }
+        .service img{
+            margin-top:10px;
+        }
+        .footer-container{
+            display:flex;
+            flex-direction:row;
+            justify-content: center;
+            margin-top:20px;
+            background-color:darkgray;
+            height:400px;
+            width: 100%;
+        }
+        .footer-section{
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            text-align:left;
+            gap:100px;
+        }
+        .footer{
+            height:300px;
+            width:200px;
+        }
+        .footer h4{
+            margin-top: 10px;
+        }
+        .child3{
+            height:300px;
+            width:500px; 
+        }
+        #mail-section, #footer-button{
+            margin-top:10px;
+            border-radius: 20px;
+            padding:10px;
+            border-color:transparent;
+        }
+        #footer-button{
+            border-radius: 20px;
+            padding:10px;
+            background-color: steelblue;
+            border-color:transparent;
+        }
+        .social-media-links{
+            margin-top:10px;
+        }
+     </style></head>
+    <body>
+    <!--hero--> 
+        <div class="container">
+        <div class="hero">
+        <div class="nav">
+            <img src="https://marketplace.canva.com/EAE0d_FW6ZA/1/0/800w/canva-retro-vector-gold-frames-luxury-decorative-logo-template-WBEkc3CZ-Xo.jpg" height="80px" width="80px" class="logo">
+            <a href="">HOME</a>
+            <a href="">PAGES</a>
+            <a href="">OUR SERVICES</a>
+            <a href="">GALLERY</a>
+            <a href="">BLOG</a>
+            <a href="">CONTACTS</a>
+            <input type="button" value="CHECK IN NOW" class="button">
+        </div>
+        <p><b>Experience the Art <br>of Fine Hospitality</b></p>
+        <img src='https://i.pinimg.com/originals/bc/5b/78/bc5b780990cd800137855a5b7f121156.jpg' height="410px" width="1000px">
+        </div>
+        </div>
+    <!--about--> 
+    <div class = "containers-1">
+    <div class="about">
+        <i><h1>About</h1></i><br><br><br><br>
+        <h5> We believe luxury isn't just a service — it's an experience. We curate the finest selection of 5-star hotels and premium resorts across the globe, ensuring every stay exceeds expectations. Whether you're seeking a tranquil escape, a romantic getaway, or a lavish business trip, our exclusive network of properties delivers unmatched elegance, comfort, and personalized service.</h5><br><h5>
+        With a seamless booking process, 24/7 concierge support, and handpicked stays that reflect style and sophistication. Indulge in the extraordinary — your journey begins here.</h5>
+        <div class="grid-box">
+        <div class="child-1">290+<br><h6>Luxury Rooms</h6></div>
+        <div class="child-2">4.8+<br><h6>Guest Rating</h6></div>
+        <div class="child-3">128k+<br><h6>Clients Happy</h6></div>
+        </div>
+        <input type ="button" value="Read more ->" class="button1">
+    </div>
+    <div class="about about-1">
+    <img src="https://i.pinimg.com/originals/be/3b/b5/be3bb58edcdb0a09740b4738cbe57b6a.jpg" height="400px" width="300px" class="img-1">
+    </div>
+    <div class="about about-2">
+    <div class="grid">
+        <div class="section-1">
+        <img src="https://img.freepik.com/premium-vector/comfort-zone-logo-design-word-mark-text-style-modern-minimal-concept_556845-952.jpg" height="80px" width="80px" class="logo1">
+        <h2>Serenity and bliss</h2><br><h5>Your comfort zone away from home</h5>
+        </div>
+        <div class="section-2">
+            <img src="https://static.vecteezy.com/system/resources/previews/010/036/500/large_2x/blue-animated-travel-suitcase-bag-icon-clipart-illustration-vector.jpg" height="80px" width="80px" class="logo1">
+         <h2>Store Luggage</h2><br><h5>Hospitality Meets Home</h5>   
+        </div>
+        <div class="section-3">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.Y7ccylZRPzUYtPMIIe6bqgHaHa&pid=Api&P=0&h=180" height="90px" width="90px" class="logo1">
+        <h2>Room Services</h2><br><h5>Hospitality Meets Home</h5>   
+        </div>
+        <div class="section-4">
+        <img src="https://play-lh.googleusercontent.com/hGT5B-wC9qB1ZAnDTUxj-pJsXIyxuNtNLBDaK1tClWe8jc2J1-iQU3pvD6QvVxjh4ak" height="90px" weight="90px" class="logo1">
+        <h2>Pick up & Drop</h2><br><h5>Experience elegance stay distinctive</h5>
+        </div>   
+    </div>
+    </div>
+    </div>
+    <div class="flex-container">
+     <div class="flex flex-1">
+        <div class="grid-room">
+          <div class="bed-size1">
+            <img src="https://www.sunsetstation.com/wp-content/uploads/2020/05/SS_-Standard-King-2016-scaled.jpg" class="img1">
+          </div>
+        <div class="empty">
+            <h3><u>01</u></h3><h2>Exclusive Deluxe</h2>
+            <img src="https://tse2.mm.bing.net/th?id=OIP.PttL-JylnOUHxAqygFFDLgHaBU&pid=Api&P=0&h=180" height="10px" width="70px">
+            <p>We have sixteen Executive Deluxe rooms with King size bed</p><br>
+            <input type="button" value="View Details" class="bed-button">
+        </div>
+        <div class="empty">
+            <h3><u>03</u></h3><h2>Oceanview Suite</h2>
+            <img src="https://tse2.mm.bing.net/th?id=OIP.PttL-JylnOUHxAqygFFDLgHaBU&pid=Api&P=0&h=180" height="10px" width="70px">
+            <p>We have sixteen Executive Deluxe rooms with King size bed</p><br>
+            <input type="button" value="View Details" class="bed-button">
+        </div>
+        <div class="bed-size2">
+            <img src="https://secretsthevineresort.com/wp-content/uploads/2022/05/Delu8xe-ocean-view-preferred-club-deluxe-ocean-view-king-room.jpg" class="img1">
+            </div>
+        </div>
+        <div class="grid-room1">
+          <div class="bed-size3">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.1NiWVADu7OjuODFJz_I8agHaEK&pid=Api&P=0&h=180" class="img1">
+          </div>
+          <div class="empty">
+            <h3><u>02</u></h3><h2>Premier Suite</h2>
+            <img src="https://tse2.mm.bing.net/th?id=OIP.PttL-JylnOUHxAqygFFDLgHaBU&pid=Api&P=0&h=180" height="10px" width="70px">
+            <p>We have sixteen Executive Deluxe rooms with King size bed</p><br>
+            <input type="button" value="View Details" class="bed-button">
+          </div>
+          <div class="empty">
+            <h3><u>04</u></h3><h2>Deluxe Twine</h2>
+            <img src="https://tse2.mm.bing.net/th?id=OIP.PttL-JylnOUHxAqygFFDLgHaBU&pid=Api&P=0&h=180" height="10px" width="70px">
+            <p>We have sixteen Executive Deluxe rooms with King size bed</p><br>
+            <input type="button" value="View Details" class="bed-button">
+          </div>
+          <div class="bed-size4">
+            <img src="https://webbox.imgix.net/images/orzvknidmcqimzcm/eb6de1f1-ea2d-4cb0-9d87-08e939f27569.jpg?auto=format,compress&fit=crop&crop=entropy" class="img1">
+          </div>
+        </div>
+    </div>
+    </div>
+    <!--hotel Facilities-->
+    <div class="heading"><h1>Hotel Facilities</h1></div>
+    <div class="h-f">
+        <div class="facility">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/035/234/375/small_2x/ai-generated-gym-equipment-pro-photo.jpg" class="gym">
+        <div class="circle">
+            <img src="https://i.pinimg.com/originals/b9/e0/eb/b9e0eba59d9e36bf7a177e652cd4597d.png" height="50px" width="50px" class="circle-img">
+        </div>
+        <div class="circle circle-1">
+            <img src="https://www.pngarts.com/files/6/Car-Parking-PNG-Image-Transparent-Background.png" width="70px" height="50px" class="circle-img">
+        </div>
+        <div class="circle circle-2">
+            <img src="https://static.vecteezy.com/system/resources/previews/021/006/030/original/house-icon-bulding-icon-home-icone-free-vector.jpg" width="50px" height="50px" class="circle-img">
+        </div>
+        <div class="circle circle-3">
+            <img src="https://as2.ftcdn.net/v2/jpg/02/76/82/71/1000_F_276827123_vTzSjDa0TgazmfoTiG04WBXpMrP968is.jpg" width="50px" height="50px" class="circle-img">
+        </div>
+        <div class="circle circle-4">
+            <img src="https://img.freepik.com/premium-vector/fitness-gym-line-icons-set-white-background-healthy-lifestyle-diet-treadmill-human-run-sport_721440-2378.jpg" width="50px" height="50px" class="circle-img">
+        </div>
+        <div class="circle circle-5">
+            <img src="https://static.vecteezy.com/system/resources/previews/017/325/864/original/beer-bar-icon-simple-cafe-pub-vector.jpg" width="50px" height="50px" class="circle-img">
+        </div>
+    </div>
+    </div>
+    <div class="card-styling">
+        <div class="card card-1">
+            <img src="https://cdn1.iconfinder.com/data/icons/round-color-icon/3/46-512.png" height="50px" width="50px" class="card-img">
+            <h1>Keeping <br>Your Safe</h1>
+            <p>We follow the highest hygiene and safety standards to ensure your peace of mind throughout your stay. From contactless check-ins to daily sanitization, we've got every detail covered.</p>
+            <input type="button" value="Book now" class="book-btn">
+        </div>
+        <div class="card card-2">
+            <img src="https://thumbs.dreamstime.com/b/cancellation-blue-stamp-isolated-white-background-cancellation-blue-stamp-97577304.jpg" height="50px" width="90px" class="card-img">
+            <h1>Cancellation <br> Within 24Hrs</h1>
+            <p>Plans change—we understand. Enjoy peace of mind with our hassle-free cancellation policy available within 24 hours of booking.</p>
+            <input type="button" value="Book now" class="book-btn">
+        </div>
+        <div class="card card-3">
+            <img src="https://cdn1.iconfinder.com/data/icons/hotel-355/512/king_size_bed_bedroom_king_beds_sleep-512.png" height="50px" width="50px" class="card-img">
+            <h1>Full Room <br>Amenities</h1>
+            <p>Experience luxury at its finest with our full range of in-room amenities—plush bedding, high-speed Wi-Fi, smart entertainment, minibar, and more, all designed for your ultimate comfort.</p>
+            <input type="button" value="Book now" class="book-btn">
+        </div>
+    </div>
+    <h1 class="service-heading">Explore Services</h1>
+    <div class="services-section">
+        <div class="service service-1">
+            <h2>Gym training center</h2>
+            <p>Stay fit while you travel with our state-of-the-art fitness center, equipped with the latest training machines and free weights. Whether you're into cardio, strength training, or yoga, our expert trainers are here to guide your wellness journey.</p>
+            <img src="http://pwsc.alaska.edu/health-fitness-center/_images/_hero-images/healthAndFitnessCenterAtPWSC.jpg" height="150px" width="300px">
+        </div>
+        <div class="service service-2">
+            <h2>Spa and Massage </h2>
+            <p>Indulge in ultimate relaxation at our luxurious spa, offering a range of rejuvenating massages and holistic treatments. Let the soothing ambiance and expert therapists melt away your stress and refresh your senses.</p>
+            <img src="https://tse4.mm.bing.net/th?id=OIP.rFeChlabj2i-qQBX2C5iQAHaE7&pid=Api&P=0&h=180" height="150px" width="300px">
+        </div>
+        <div class="service service-3">
+             <h2>Wedding and Meeting </h2>
+             <p>Celebrate your special moments or host professional gatherings in our elegant venues designed for perfection. From dreamy weddings to high-end corporate meetings, we provide personalized service and world-class amenities to make every event unforgettable.</p>
+             <img src="https://www.wedding-spot.com/blog/sites/wsblog/files/images/migrated/78-Fitroy%2Bwedding%2Bvenue.jpg" height="150px" width="300px">
+        </div>
+    </div>
+    <div class="services-2">
+        <div class="service service-4">
+             <h2>Conference and Events </h2>
+             <p>Host grand conferences and memorable events in our fully equipped, luxurious venues. With cutting-edge technology, customizable setups, and dedicated event planners, we ensure a seamless experience from start to finish.</p>
+             <img src="https://tse2.mm.bing.net/th?id=OIP.NNZcSaBjxACBTnL2Y2yJfQHaEK&pid=Api&P=0&h=180" height="150px" width="300px" class="service-img">
+        </div>
+        <div class="service service-5">
+             <h2>Swimming Pool</h2>
+             <p>Dive into luxury in our crystal-clear swimming pool, perfect for both relaxation and recreation. Surrounded by elegant loungers and serene views, it's your private escape to unwind under the sun or stars.</p>
+             <img src="https://www.gannett-cdn.com/presto/2019/02/27/USAT/52c2114d-9f01-48b4-b9fd-0f29fb4bd542-ang_Oceanfront_Infinity_Pool_at_Anguillas_Zemi_Beach_House_Hotel__Spa_is_the_go-to_for_relaxation_Credit_Dylan_Cross_Tambourine.jpg?crop=3999,2249,x0,y303&width=3200&height=1680&fit=bounds" height="150px" width="300px">
+        </div>
+        <div class="service service-6">
+             <h2>Restaurant & Bar</h2>
+             <p>Savor world-class cuisine and signature cocktails in our elegant restaurant and stylish bar. From gourmet dining to relaxed evening drinks, every moment is crafted to delight your taste buds in a luxurious setting.</p>
+             <img src="https://tse4.mm.bing.net/th?id=OIP.SGKxDjgPC4gVfydhd2m5zgHaEc&pid=Api&P=0&h=180" height="150px" width="300px">
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+           <div class="footer child1">
+            <h1>Useful Link</h1>
+            <h4>About us</h4>
+            <h4>Featured Rooms</h4>
+            <h4>Our Best Services</h4>
+            <h4>Request a Booking</h4>
+            <h4>Career</h4>
+            <h4>FAQ</h4>
+           </div>
+           <div class="footer child2">
+            <h1>Explore</h1>
+            <h4>All Offers</h4>
+            <h4>Our Rooms</h4>
+            <h4>Our Gallery</h4>
+            <h4>Client Reviews</h4>
+            <h4>Neighbourhood</h4>
+           </div>
+           <div class="footer child3">
+            <h1>Subscibe To Receive <br> Latest Offers</h1>
+            <input type="text" placeholder="Enter email" id="mail-section">
+            <button id="footer-button">SUBSCRIBE </button><br>
+            <img src="https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-1-2.png" height="25px" width="25px" class="social-media-links">
+            <img src="https://www.kingtree.eu/wp-content/uploads/2017/10/Linkedin_circle.svg_.png" height="25px" width="25px" class="social-media-links">
+            <img src="https://logopng.com.br/logos/instagram-40.png" height="25px" width="25px" class="social-media-links">
+            <img src="https://www.freeiconspng.com/uploads/youtube-logo-in-png-26.png" height="25px" width="25px" class="social-media-links">
+           </div>
+           </div>
+        </div>
+    </footer>
+    </body>
+</html>
